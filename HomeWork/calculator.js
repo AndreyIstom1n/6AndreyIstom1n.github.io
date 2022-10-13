@@ -49,26 +49,26 @@ function updatePrice() {
                 price = prices.types[0] * count;
             }
         }
-        else if(price/count-prices.types[select.value - 1] == 40 || price/count-prices.types[select.value - 1] == 240) {
+        else if(price/count-prices.types[select.value - 1] == 40 || price/count-prices.types[select.value - 1] == 140) {
         price -= 40 * count;
         }
-        else if(price/count-prices.types[select.value - 1] == 90 || price/count-prices.types[select.value - 1] == 290) {
+        else if(price/count-prices.types[select.value - 1] == 90 || price/count-prices.types[select.value - 1] == 190) {
             price -= 90 * count;
         }
-        else if(price/count-prices.types[select.value - 1] == -50 || price/count-prices.types[select.value - 1] == 150) {
+        else if(price/count-prices.types[select.value - 1] == -50 || price/count-prices.types[select.value - 1] == 50) {
             price -= -50 * count;
         }
-        else if(price/count-prices.types[select.value - 1] == 130 || price/count-prices.types[select.value - 1] == 330) {
-            price -= 190 * count;
+        else if(price/count-prices.types[select.value - 1] == 130 || price/count-prices.types[select.value - 1] == 230) {
+            price -= 130 * count;
         }
-        else if(price/count-prices.types[select.value - 1] == -10 || price/count-prices.types[select.value - 1] == 190) {
+        else if(price/count-prices.types[select.value - 1] == -10 || price/count-prices.types[select.value - 1] == 90) {
             price -= -10 * count;
         }
-        else if(price/count-prices.types[select.value - 1] == -40 || price/count-prices.types[select.value - 1] == 160) {
-            price -= 100 * count;
+        else if(price/count-prices.types[select.value - 1] == -40 || price/count-prices.types[select.value - 1] == 60) {
+            price -= -40 * count;
         }
-        else if(price/count-prices.types[select.value - 1] == 80 || price/count-prices.types[select.value - 1] == 280) {
-            price -= 140 * count;
+        else if(price/count-prices.types[select.value - 1] == 80 || price/count-prices.types[select.value - 1] == 180) {
+            price -= 80 * count;
         }
         let Price = document.getElementById("price");
         Price.innerHTML = price + " рублей";
