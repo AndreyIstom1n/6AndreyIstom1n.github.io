@@ -3,7 +3,7 @@ function updatePrice() {
     let select = s[0];
     let price = 0;
     let prices = {
-        types: [400, 300, 500, 100, 800 ],
+        types: [400, 300, 500],
         options: {
             2: 100,
         },
@@ -15,7 +15,7 @@ function updatePrice() {
     };
     price = prices.types[select.value - 1];
     let radioDiv = document.getElementById("radios");
-    radioDiv.style.display = (select.value == "2" || select.value == "4" ? "block" : "none");
+    radioDiv.style.display = (select.value == "2" ? "block" : "none");
     let radios = document.getElementsByName("options");
     radios.forEach(function(radio) {
         if (radio.checked) {
@@ -26,7 +26,7 @@ function updatePrice() {
         }
     });
     let checkDiv = document.getElementById("checkboxes");
-    checkDiv.style.display = (select.value == "1" || select.value == "2" || select.value == "4" ? "none" : "block");
+    checkDiv.style.display = (select.value == "1" || select.value == "2" ? "none" : "block");
     let checkboxes = document.querySelectorAll("#checkboxes input");
     checkboxes.forEach(function(checkbox) {
         if (checkbox.checked) {
@@ -40,11 +40,9 @@ function updatePrice() {
         Price.innerHTML = "Данные введены неправильно";
     }
     else {
-        price *= parseInt(count);
-        if(select.value != "2" && select.value != "4") {
-            if(price-prices.types[select.value - 1] * count>=100 && select.value != "1" && price-prices.types[select.value - 1] * count!=130 && price-prices.types[select.value - 1] * count!=140) {
-                price -= 100 * count;
-            }
+        price *= count;
+        if(select.value != "2") 
+        {  
             if(select.value == "1") {
                 price = prices.types[0] * count;
             }
