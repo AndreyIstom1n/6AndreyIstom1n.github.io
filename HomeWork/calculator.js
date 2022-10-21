@@ -3,7 +3,7 @@ function updatePrice() {
     let select = s[0];
     let price = 0;
     let prices = {
-        types: [400, 279, 555, 144, 800 ],
+        types: [400, 300, 500, 100, 800 ],
         options: {
             2: 100,
         },
